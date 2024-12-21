@@ -1,0 +1,23 @@
+[core]
+	excludesfile = /Users/quocan/.gitignore_global
+	compression = 0
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Quoc An
+	email = ancq@antoree.com
+[commit]
+	template = /Users/quocan/.stCommitMsg
+[credential]
+	helper = osxkeychain
+[http]
+	postBuffer = 2048M
+	lowSpeedLimit = 0
+	lowSpeedTime = 999999
+	maxRequestBuffer = 1048576000
+[alias]
+	dotfiles = !git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME
