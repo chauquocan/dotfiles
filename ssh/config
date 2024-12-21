@@ -1,0 +1,51 @@
+
+# --- Sourcetree Generated ---
+Host github.com
+	HostName github.com
+	User ancq-antoree
+	PreferredAuthentications publickey
+	IdentityFile /Users/quocan/.ssh/ancq-antoree-GitHub
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------
+
+# --- Sourcetree Generated ---
+Host bitbucket.org
+	HostName bitbucket.org
+	User phuchung-freelancer
+	PreferredAuthentications publickey
+	IdentityFile /Users/quocan/.ssh/phuchung-freelancer-Bitbucket
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------
+
+# --- Sourcetree Generated ---
+Host github.com
+	HostName github.com
+	User phuchung-freelancer-github
+	PreferredAuthentications publickey
+	IdentityFile /Users/quocan/.ssh/phuchung-freelancer-github-GitHub
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------
+
+# --- Sourcetree Generated ---
+Host github.com
+	HostName github.com
+	User phuchung-freelancer
+	PreferredAuthentications publickey
+	IdentityFile /Users/quocan/.ssh/phuchung-freelancer-GitHub
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------
+
+
+# --- Sourcetree Generated ---
+Host github.com
+	HostName github.com
+	User chauquocan
+	PreferredAuthentications publickey
+	IdentityFile /Users/quocan/.ssh/chauquocan-GitHub
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------
