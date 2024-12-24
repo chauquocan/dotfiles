@@ -1,15 +1,20 @@
-{ config, pkgs, ... }:
+{ agenix, config, pkgs, ... }:
 
-let user = "%USER%"; in
+let user = "quocan"; in
 
 {
+
   imports = [
+    ../../modules/darwin/secrets.nix
     ../../modules/darwin/home-manager.nix
     ../../modules/shared
+     agenix.darwinModules.default
   ];
 
+  # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
 
+  # Setup user, packages, programs
   nix = {
     package = pkgs.nix;
     settings = {
@@ -30,10 +35,13 @@ let user = "%USER%"; in
     '';
   };
 
+  # Turn off NIX_PATH warnings now that we're using flakes
   system.checks.verifyNixPath = false;
 
+  # Load configuration that is shared across systems
   environment.systemPackages = with pkgs; [
     emacs-unstable
+    agenix.packages."${pkgs.system}".default
   ] ++ (import ../../modules/shared/packages.nix { inherit pkgs; });
 
   launchd.user.agents.emacs.path = [ config.environment.systemPath ];
@@ -56,20 +64,38 @@ let user = "%USER%"; in
         AppleShowAllExtensions = true;
         ApplePressAndHoldEnabled = false;
 
-        KeyRepeat = 2; # Values: 120, 90, 60, 30, 12, 6, 2
-        InitialKeyRepeat = 15; # Values: 120, 94, 68, 35, 25, 15
+        # 120, 90, 60, 30, 12, 6, 2
+        KeyRepeat = 2;
+
+        # 120, 94, 68, 35, 25, 15
+        InitialKeyRepeat = 15;
 
         "com.apple.mouse.tapBehavior" = 1;
         "com.apple.sound.beep.volume" = 0.0;
         "com.apple.sound.beep.feedback" = 0;
+        "com.apple.swipescrolldirection" = false;
       };
 
       dock = {
-        autohide = false;
+        autohide = true;
         show-recents = false;
         launchanim = true;
         orientation = "bottom";
         tilesize = 48;
+      };
+
+      WindowManager = {
+        GloballyEnabled = true;
+        EnableStandardClickToShowDesktop = true;
+        AppWindowGroupingBehavior = false;
+        StandardHideDesktopIcons = false;
+        StandardHideWidgets = false;
+        StageManagerHideWidgets = false;
+        HideDesktop = false;
+      };
+
+      controlcenter = {
+        
       };
 
       finder = {
@@ -78,7 +104,9 @@ let user = "%USER%"; in
 
       trackpad = {
         Clicking = true;
+        Dragging = true;
         TrackpadThreeFingerDrag = true;
+        TrackpadThreeFingerTapGesture = 0;
       };
     };
   };

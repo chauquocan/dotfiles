@@ -2,19 +2,15 @@
 
 with pkgs; [
   # General packages for development and system management
-  alacritty
-  aspell
-  aspellDicts.en
+  iterm2
   bash-completion
-  bat
   btop
-  coreutils
-  killall
   neofetch
-  openssh
-  sqlite
-  wget
-  zip
+  awscli2
+
+  # IDLE
+  jetbrains.datagrip
+  jetbrains.phpstorm
 
   # Encryption and security tools
   age
@@ -43,12 +39,8 @@ with pkgs; [
   nodejs
 
   # Text and terminal utilities
-  htop
-  hunspell
-  iftop
   jetbrains-mono
   jq
-  ripgrep
   tree
   tmux
   unrar
@@ -56,6 +48,6 @@ with pkgs; [
   zsh-powerlevel10k
 
   # Python packages
-  python3
-  virtualenv
+  #python3
+  #virtualenv
 ]
