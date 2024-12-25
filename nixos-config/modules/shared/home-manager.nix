@@ -67,7 +67,7 @@ let name = "quocan";
     extraConfig = {
       init.defaultBranch = "main";
       core = {
-	    editor = "vim";
+	      editor = "vim";
         autocrlf = "input";
       };
       commit.gpgsign = false;
