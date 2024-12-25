@@ -38,6 +38,9 @@ with pkgs; [
   nodePackages.prettier
   nodejs
 
+  # Mobile development tools
+  cocoapods
+
   # Text and terminal utilities
   jetbrains-mono
   jq

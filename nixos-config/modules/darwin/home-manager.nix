@@ -51,6 +51,8 @@ in
     # This message is safe to ignore. (https://github.com/dustinlyons/nixos-config/issues/83)
 
     masApps = {
+      "Xcode" = 497799835;
+      "EZVIZ for Computer" = 1594552558;
     };
   };
 
