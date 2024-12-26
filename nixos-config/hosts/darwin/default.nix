@@ -56,13 +56,18 @@ let user = "quocan"; in
     StandardOutPath = "/tmp/emacs.out.log";
   };
 
+  # Add ability to used TouchID for sudo authentication
+  security.pam.enableSudoTouchIdAuth = true;
+
   system = {
     stateVersion = 4;
 
     defaults = {
       NSGlobalDomain = {
-        AppleShowAllExtensions = true;
+        AppleShowAllExtensions = false;
         ApplePressAndHoldEnabled = false;
+        AppleEnableSwipeNavigateWithScrolls = false;
+        AppleEnableMouseSwipeNavigateWithScrolls = false;
 
         # 120, 90, 60, 30, 12, 6, 2
         KeyRepeat = 2;
@@ -73,7 +78,7 @@ let user = "quocan"; in
         "com.apple.mouse.tapBehavior" = 1;
         "com.apple.sound.beep.volume" = 0.0;
         "com.apple.sound.beep.feedback" = 0;
-        "com.apple.swipescrolldirection" = false;
+        "com.apple.swipescrolldirection" = true;
       };
 
       dock = {
@@ -95,7 +100,7 @@ let user = "quocan"; in
       };
 
       controlcenter = {
-        
+        Bluetooth = true;
       };
 
       finder = {

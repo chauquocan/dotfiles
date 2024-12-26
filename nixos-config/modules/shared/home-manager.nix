@@ -53,6 +53,19 @@ let name = "quocan";
 
       # Clear
       alias c='clear'
+
+      ## [Completion]
+      ## Completion scripts setup. Remove the following line to uninstall
+      [[ -f /Users/quocan/.dart-cli-completion/zsh-config.zsh ]] && . /Users/quocan/.dart-cli-completion/zsh-config.zsh || true
+      ## [/Completion]
+
+      export PATH="$PATH:$HOME/fvm/default/bin"
+      export PATH="$PATH":"$HOME/.pub-cache/bin"
+      export PATH="$PATH:/usr/local/bin"
+      export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+      export PATH="$PATH:/usr/local/bin/aws"
+      export PATH="$PATH:/Users/quocan/Library/Android/sdk/platform-tools"
+      export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
     '';
   };
 

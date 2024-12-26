@@ -36,6 +36,7 @@ in
       "mysql"
       "fvm"
       "php@7.4"
+      "openjdk@17"
       "composer"
     ];
 

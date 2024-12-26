@@ -20,3 +20,4 @@ ditto
 spaceship.*
 nvim/lazy-lock.json
 op/**
+.DS_Store
