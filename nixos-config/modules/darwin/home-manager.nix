@@ -93,14 +93,8 @@ in
         { path = "${pkgs.jetbrains.datagrip}/Applications/DataGrip.app/"; }
         { path = "/Applications/Postman.app/"; }
         { path = "/Applications/Microsoft Teams.app/"; }
-        { 
-          path = "/System/Applications/Music.app/";
-          section = "others";
-        }
-        { 
-          path = "/System/Applications/System Settings.app/";
-          section = "others";
-        }
+        { path = "/System/Applications/Music.app/"; }
+        { path = "/System/Applications/System Settings.app/"; }
         {
           path = "${config.users.users.${user}.home}/Downloads";
           section = "others";
