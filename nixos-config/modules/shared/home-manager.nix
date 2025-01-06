@@ -57,10 +57,6 @@ let name = "quocan";
           nix-shell '<nixpkgs>' -A "$1"
       }
 
-      # pnpm is a javascript package manager
-      alias pn=pnpm
-      alias px=pnpx
-
       # Always color ls and group directories
       alias ls='ls --color=auto'
 
