@@ -289,10 +289,11 @@ let user = "quocan";
     dejavu_fonts
     emacs-all-the-icons-fonts
     feather-font # from overlay
-    jetbrains-mono
     font-awesome
     noto-fonts
     noto-fonts-emoji
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.meslo-lg
   ];
 
   environment.systemPackages = with pkgs; [

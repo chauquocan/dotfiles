@@ -59,6 +59,16 @@ let user = "quocan"; in
   # Add ability to used TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;
 
+  time.timeZone = "Asia/Ho_Chi_Minh";
+
+  power = {
+    sleep = {
+      allowSleepByPowerButton = true;
+      computer = 30;
+      display = 20;
+    };
+  };
+
   system = {
     stateVersion = 4;
 
@@ -66,8 +76,8 @@ let user = "quocan"; in
       NSGlobalDomain = {
         AppleShowAllExtensions = false;
         ApplePressAndHoldEnabled = false;
-        AppleEnableSwipeNavigateWithScrolls = false;
-        AppleEnableMouseSwipeNavigateWithScrolls = false;
+        AppleEnableSwipeNavigateWithScrolls = true;
+        AppleEnableMouseSwipeNavigateWithScrolls = true;
 
         # 120, 90, 60, 30, 12, 6, 2
         KeyRepeat = 2;
@@ -79,6 +89,15 @@ let user = "quocan"; in
         "com.apple.sound.beep.volume" = 0.0;
         "com.apple.sound.beep.feedback" = 0;
         "com.apple.swipescrolldirection" = true;
+      };
+
+      loginwindow = {
+        GuestEnabled = false;
+        LoginwindowText = "Welcome to An's Macbook Pro";
+      };
+
+      screencapture = {
+        location = "~/Documents";
       };
 
       dock = {
@@ -101,10 +120,25 @@ let user = "quocan"; in
 
       controlcenter = {
         Bluetooth = true;
+        Sound = true;
+        AirDrop = false;
+        Display = false;
+        FocusModes = false;
+        NowPlaying = false;
       };
 
       finder = {
+        NewWindowTarget = "Home";
+        AppleShowAllFiles = true;
+        
+        ShowExternalHardDrivesOnDesktop = true;
+        ShowHardDrivesOnDesktop = true;
+        ShowPathbar = true;
+        ShowStatusBar = true;
+
         _FXShowPosixPathInTitle = false;
+        _FXSortFoldersFirstOnDesktop = true;
+        _FXSortFoldersFirst = true;
       };
 
       trackpad = {
@@ -113,6 +147,16 @@ let user = "quocan"; in
         TrackpadThreeFingerDrag = true;
         TrackpadThreeFingerTapGesture = 0;
       };
+
+      CustomUserPreferences = {
+      "com.apple.desktopservices" = {
+        # Disable creating .DS_Store files in network an USB volumes
+        DSDontWriteNetworkStores = true;
+        DSDontWriteUSBStores = true;
+      };
+      # Privacy
+      "com.apple.AdLib".allowApplePersonalizedAdvertising = false;
+    };
     };
   };
 }

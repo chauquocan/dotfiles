@@ -21,6 +21,10 @@ let name = "quocan";
           file = "p10k.zsh";
       }
     ];
+    shellAliases = {
+      "c" = "clear";
+      ".." = "cd ..";
+    };
     initExtraFirst = ''
       if [[ -f /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]]; then
         . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
@@ -31,6 +35,15 @@ let name = "quocan";
       export PATH=$HOME/.pnpm-packages/bin:$HOME/.pnpm-packages:$PATH
       export PATH=$HOME/.npm-packages/bin:$HOME/bin:$PATH
       export PATH=$HOME/.local/share/bin:$PATH
+
+      export PATH="$PATH:$HOME/fvm/default/bin"
+      export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+      export PATH="$PATH:/usr/local/bin"
+      export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+      export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+      export PATH="$PATH:/Users/quocan/Library/Android/sdk/platform-tools"
+      export PATH="$PATH:/usr/local/bin/aws"
 
       # Remove history data we don't want to see
       export HISTIGNORE="pwd:ls:cd"
@@ -51,21 +64,10 @@ let name = "quocan";
       # Always color ls and group directories
       alias ls='ls --color=auto'
 
-      # Clear
-      alias c='clear'
-
       ## [Completion]
       ## Completion scripts setup. Remove the following line to uninstall
       [[ -f /Users/quocan/.dart-cli-completion/zsh-config.zsh ]] && . /Users/quocan/.dart-cli-completion/zsh-config.zsh || true
       ## [/Completion]
-
-      export PATH="$PATH:$HOME/fvm/default/bin"
-      export PATH="$PATH":"$HOME/.pub-cache/bin"
-      export PATH="$PATH:/usr/local/bin"
-      export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-      export PATH="$PATH:/usr/local/bin/aws"
-      export PATH="$PATH:/Users/quocan/Library/Android/sdk/platform-tools"
-      export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
     '';
   };
 
@@ -83,6 +85,8 @@ let name = "quocan";
 	      editor = "vim";
         autocrlf = "input";
       };
+      http.postBuffer = "524288000";
+      http.version = "HTTP/1.1";  
       commit.gpgsign = false;
       pull.rebase = true;
       rebase.autoStash = true;

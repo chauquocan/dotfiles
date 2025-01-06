@@ -11,6 +11,7 @@ _:
   "microsoft-auto-update"
   "microsoft-teams"
   "libreoffice"
+  "zalo"
   #"discord"
   #"notion"
   #"slack"
