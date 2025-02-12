@@ -12,6 +12,7 @@
     with sdkPkgs; [
       cmdline-tools-latest
       build-tools-34-0-0
+      build-tools-30-0-3
       platform-tools
       platforms-android-34
       platforms-android-33

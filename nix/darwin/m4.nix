@@ -27,6 +27,7 @@
       tmux
       alejandra
       btop
+      firebase-tools
 
       # Mobile development tools
       cocoapods
@@ -151,10 +152,16 @@
         # Set dock persistent apps
         persistent-apps = [
           "${pkgs.wezterm}/Applications/WezTerm.app"
-          "Applications/Notion.app"
+          "${pkgs.obsidian}/Applications/Obsidian.app"
+          "/Applications/Notion.app"
           "/Applications/Arc.app"
-          "/Applications/Visual Studio Code.app"
           "/Applications/Microsoft Teams.app"
+          "/Applications/Skype.app"
+          "/Applications/Zalo.app"
+          "/Applications/Xcode.app"
+          "/Applications/Visual Studio Code.app"
+          "${pkgs.jetbrains.phpstorm}/Applications/PhpStorm.app"
+          "${pkgs.jetbrains.datagrip}/Applications/DataGrip.app"
           "/System/Applications/Music.app"
           "/System/Applications/Notes.app"
           "/System/Applications/System Settings.app"

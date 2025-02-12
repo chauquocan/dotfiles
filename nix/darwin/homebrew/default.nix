@@ -60,14 +60,17 @@ in {
       # Entertainment Tools
       "iina"
       "jellyfin-media-player"
+      "steam"
 
       # Productivity Tools
       "notion"
       "raycast"
+      "the-unarchiver"
 
       # Browsers
       "google-chrome"
       "arc"
+      "firefox"
 
       # Multimedia Tools
       "obs"
@@ -78,6 +81,7 @@ in {
       "monitorcontrol"
       "openkey"
       "microsoft-auto-update"
+      "lm-studio"
     ];
 
     masApps = {
