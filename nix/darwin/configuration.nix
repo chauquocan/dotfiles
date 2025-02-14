@@ -31,6 +31,9 @@
       eza # Ls
       git # Version Control
       mas # Mac App Store $ mas search <app>
+      bat #
+      fzf #
+      lazygit #
     ];
   };
 

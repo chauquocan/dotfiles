@@ -70,7 +70,7 @@ in {
       # Browsers
       "google-chrome"
       "arc"
-      "firefox"
+      # "firefox"
 
       # Multimedia Tools
       "obs"
@@ -81,7 +81,7 @@ in {
       "monitorcontrol"
       "openkey"
       "microsoft-auto-update"
-      "lm-studio"
+      # "lm-studio"
     ];
 
     masApps = {
