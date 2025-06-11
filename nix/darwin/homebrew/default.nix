@@ -48,6 +48,7 @@ in {
       # Development Tools
       "homebrew/cask/docker"
       "visual-studio-code"
+      "cursor"
       "postman"
 
       # Communication Tools
@@ -55,7 +56,6 @@ in {
       "zalo"
       "discord"
       "telegram"
-      "skype"
 
       # Entertainment Tools
       "iina"

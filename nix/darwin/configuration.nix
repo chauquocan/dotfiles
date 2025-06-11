@@ -47,7 +47,7 @@
     home.stateVersion = "23.05";
   };
 
-  services.nix-daemon.enable = true;
+  # services.nix-daemon.enable = true;
 
   nix = {
     package = pkgs.nix;

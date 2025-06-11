@@ -25,6 +25,9 @@
       neovim
       mkalias
       tmux
+      bat
+      fzf
+      lazygit
       alejandra
       btop
       firebase-tools
@@ -42,8 +45,10 @@
     ];
   };
 
+  system.primaryUser = vars.user;
+
   # Add ability to used TouchID for sudo authentication
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   # Set the timezone
   time.timeZone = "Asia/Ho_Chi_Minh";
